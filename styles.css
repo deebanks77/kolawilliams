@@ -1,0 +1,463 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #000000 100%);
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(220, 38, 38, 0.1) 0%, transparent 70%);
+    animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.artist-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #dc2626, #ef4444, #f87171);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 40px rgba(220, 38, 38, 0.5);
+}
+
+.tagline {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: #9ca3af;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.quick-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #dc2626;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-top: 30px;
+    transition: all 0.3s;
+    border: 2px solid #dc2626;
+}
+
+.download-btn:hover {
+    background: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
+}
+
+/* Section Styles */
+.section {
+    padding: 80px 20px;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #dc2626;
+}
+
+/* Bio Section */
+.bio-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d1d5db;
+}
+
+/* Press Photos */
+.press-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.press-photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 3/4;
+    border: 2px solid #1f1f1f;
+    transition: all 0.3s;
+}
+
+.press-photo:hover {
+    border-color: #dc2626;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.3);
+}
+
+.press-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.platform-stat {
+    background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #2a2a2a;
+    transition: all 0.3s;
+}
+
+.platform-stat:hover {
+    border-color: #dc2626;
+    transform: translateY(-5px);
+}
+
+.platform-name {
+    font-size: 1rem;
+    color: #9ca3af;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.platform-streams {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #dc2626;
+}
+
+/* Discography */
+.discography-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #2a2a2a;
+    transition: all 0.3s;
+}
+
+.project:hover {
+    border-color: #dc2626;
+    transform: translateY(-5px);
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.project-type {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Collaborations */
+.collab-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.collab-tag {
+    background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 1px solid #2a2a2a;
+    transition: all 0.3s;
+}
+
+.collab-tag:hover {
+    border-color: #dc2626;
+    color: #dc2626;
+    transform: scale(1.05);
+}
+
+/* Co-signs */
+.cosigns {
+    background: linear-gradient(135deg, #1a0000, #0a0a0a);
+    padding: 60px 20px;
+    margin: 40px 0;
+    border-radius: 20px;
+    border: 2px solid #2a0000;
+}
+
+.cosign-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #dc2626;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cosign-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cosign-item {
+    background: rgba(220, 38, 38, 0.1);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 2px solid #dc2626;
+}
+
+/* Media Coverage */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.media-item {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #2a2a2a;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.media-item:hover {
+    border-color: #dc2626;
+    color: #dc2626;
+}
+
+/* Performances */
+.performance-list {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.performance-item {
+    background: linear-gradient(90deg, #1a1a1a, #0f0f0f);
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #dc2626;
+    transition: all 0.3s;
+}
+
+.performance-item:hover {
+    transform: translateX(10px);
+    border-left-width: 8px;
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, #1a0000, #000000);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-block;
+    background: rgba(220, 38, 38, 0.1);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 2px solid #dc2626;
+    transition: all 0.3s;
+}
+
+.social-link:hover {
+    background: #dc2626;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
+}
+
+.book-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    color: white;
+    padding: 20px 60px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 40px;
+    transition: all 0.3s;
+    border: 3px solid #dc2626;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.book-btn:hover {
+    background: transparent;
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(220, 38, 38, 0.5);
+}
+
+/* QR Code Section */
+.qr-section {
+    margin-top: 60px;
+    padding: 40px;
+    background: #1a1a1a;
+    border-radius: 20px;
+    border: 2px solid #2a2a2a;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .artist-name {
+        font-size: 3rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .quick-stats {
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .press-photos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .download-btn,
+    .book-btn {
+        display: none;
+    }
+}
